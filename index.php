@@ -13,12 +13,21 @@ require "weather.php";
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div id="date"></div>
-  <div id="clock"></div>
+  <div class="date-container">
+    <div id="day"></div>
+    <div id="date"></div>
+  </div>
+  <div class="clock-container">
+    <div id="hour"></div>
+    <div class="colon">:</div>
+    <div id="minute"></div>
+    <div class="colon">:</div>
+    <div id="second"></div>
+  </div>
   <div class="weather-container">
-    <div class="temp"><?= $temp ?>&deg;C</div>
+    <div class="temp"><?= $temp ?>&deg;<span class="deg">C</span></div>
     <div class="desc"><?= $description ?></div> 
-    <img src="<?= $icon ?>" alt="#"> 
+    <img class="icon" src="<?= $icon ?>" alt="#"> 
   </div> 
   <script src="./time.js"></script>
 </body>

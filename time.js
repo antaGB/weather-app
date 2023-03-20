@@ -1,5 +1,8 @@
-const obj = document.querySelector("#clock");
-const obj2 = document.querySelector("#date");
+const theHour = document.querySelector("#hour");
+const theMinute = document.querySelector("#minute");
+const theSecond = document.querySelector("#second");
+const theDay = document.querySelector("#day");
+const theDate = document.querySelector("#date");
 
 function currentTime() {
   const time = new Date();
@@ -9,8 +12,11 @@ function currentTime() {
   hour = checkTime(hour);
   minute = checkTime(minute);
   second = checkTime(second);
-  obj.innerText = hour + " : " + minute + " : " + second;
+  theHour.innerText = hour;
+  theMinute.innerText = minute;
+  theSecond.innerText = second;
 }
+
 function currentDate() {
   const time = new Date();
   let day = time.getDay();
@@ -20,7 +26,8 @@ function currentDate() {
   day = checkDay(day);
   date = checkTime(date);
   month = checkTime(month);
-  obj2.innerText = day + ", " + date + " " + month + " " + year;
+  theDay.innerText = day;
+  theDate.innerText = date + "." + month + "." + year;
 }
 
 function checkTime(e) {
